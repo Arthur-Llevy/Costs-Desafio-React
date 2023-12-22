@@ -1,3 +1,4 @@
+import { ServiceType } from '../../components/ServiceForm/types.ts';
 
 type ProjectType = {
 	category: {
@@ -8,9 +9,8 @@ type ProjectType = {
 	budget: number;
 	id: number;
 	costs: number;
-	services: string[];
+	services: ServiceType[];
 };
-
 
 type ProjectFormProps = {
 	btnText: string;

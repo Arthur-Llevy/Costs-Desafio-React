@@ -8,7 +8,7 @@ import { ProjectForm } from '../../components/ProjectForm/';
 import { Message } from '../../layout/Message/';
 import { ServiceForm } from '../../components/ServiceForm/';
 import { ServiceType } from '../../components/ServiceForm/types.ts';
-import { parse, v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { ServiceCard } from '../../components/ServiceCard/';
 
 export const Project = () => {
@@ -22,7 +22,7 @@ export const Project = () => {
 	const [services, setServices] = useState<ServiceType[]>([]);
 
 	useEffect(() => {
-		const timer: NodeJS.Timeout = setTimeout(() => {
+		const timer: number = setTimeout(() => {
 			fetch(`http://localhost:5000/projects/${id}`, {
 				method: "GET",
 				headers: { "Content-Type": "application/json" }
@@ -75,7 +75,7 @@ export const Project = () => {
 	const createService = (project: ProjectType): void | boolean => {
 		const lastService: ServiceType = project.services[project.services.length -1];
 
-		lastService.id = uuidv4();
+		lastService.id = Number(uuidv4());
 		const lastServiceCost: number = lastService.cost;
 		const newCost: number = parseFloat(project.costs.toString()) + parseFloat(lastServiceCost.toString());
 

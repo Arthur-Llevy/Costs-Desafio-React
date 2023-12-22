@@ -13,7 +13,7 @@ export const Message = ({ type, msg }: MessageProps) => {
 		};
 
 		setVisible(true);
-		const timer: NodeJS.Timeout = setTimeout(() => {
+		const timer: number  = setTimeout(() => {
 			setVisible(false);
 		}, 3000);
 
