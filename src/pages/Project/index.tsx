@@ -22,7 +22,7 @@ export const Project = () => {
 	const [services, setServices] = useState<ServiceType[]>([]);
 
 	useEffect(() => {
-		const timer: number = setTimeout(() => {
+		const timer: NodeJS.Timeout = setTimeout(() => {
 			fetch(`http://localhost:5000/projects/${id}`, {
 				method: "GET",
 				headers: { "Content-Type": "application/json" }
