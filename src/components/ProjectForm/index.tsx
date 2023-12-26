@@ -1,4 +1,3 @@
-import './styles.css';
 import { Input } from './Input';
 import { Select } from './Select/';
 import { SubmitButton } from './SubmitButton/';

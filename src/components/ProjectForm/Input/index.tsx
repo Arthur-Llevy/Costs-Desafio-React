@@ -1,9 +1,9 @@
-import './styles.css';
+import * as S from '../styles.ts';
 import { InputProps } from './types.ts';
 
 export const Input = ({ type, text, name, placeholder, handleOnChange, value }: InputProps) => {
 	return (
-		<div className="form-control">
+		<S.FormContainer>
 			<label htmlFor={name}>{text}:</label>
 			<input 
 				type={type}
@@ -13,6 +13,6 @@ export const Input = ({ type, text, name, placeholder, handleOnChange, value }: 
 				name={name}
 				id={name}
 			/>
-		</div>
+		</S.FormContainer>
 	);
 };

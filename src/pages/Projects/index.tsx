@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { Message } from '../../layout/Message/'
-import './styles.css';
+import * as S from './styles.ts';
 import { Container } from '../../layout/Container/';
 import { LinkButton } from '../../components/LinkButton/';
 import { ProjectCard } from '../../components/ProjectCard';
@@ -61,11 +61,11 @@ export const Projects = () => {
 	};
 
 	return(
-		<div className="project-container">
-			<div className="title-container">
+		<S.ProjectCcontainer>
+			<S.TitleContainer>
 				<h1>Meus pojetos</h1>
 				<LinkButton to="/newproject" text="Criar projeto"/>				
-			</div>
+			</S.TitleContainer>
 			{message && <Message msg={message} type="sucess"/>}
 			{projectMessage && <Message msg={projectMessage} type="sucess"/>}
 			<Container customClass="start">
@@ -86,6 +86,6 @@ export const Projects = () => {
 					<p>Não há projetos cadastrados</p>
 				)}
 			</Container>
-		</div>
+		</S.ProjectCcontainer>
 	);
 }

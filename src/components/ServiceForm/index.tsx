@@ -1,4 +1,4 @@
-import './styles.css';
+import * as S from '../ProjectForm/styles.ts';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Input }  from '../ProjectForm/Input/';
 import { SubmitButton }  from '../ProjectForm/SubmitButton/';
@@ -24,7 +24,7 @@ export const ServiceForm = ({ handleSubmit, btnText, projectData }: ServiceFormP
 	};
 
 	return (
-		<form onSubmit={submit} className="form-control">
+		<S.FormContainer onSubmit={submit}>
 			<Input
 				type="text"
 				text="Nome do serviço"
@@ -47,6 +47,6 @@ export const ServiceForm = ({ handleSubmit, btnText, projectData }: ServiceFormP
 				handleOnChange={handleChange}
 			/>
 			<SubmitButton text={btnText} />
-		</form>
+		</S.FormContainer>
 	);
 }

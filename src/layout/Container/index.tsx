@@ -1,10 +1,10 @@
 import { ContainerProps } from './types.ts';
-import './styles.css';
+import * as S from './styles.ts';
 
 export const Container = ({ children, customClass }: ContainerProps ) => {
 	return(
-		<div className={`container ${customClass}`}>
+		<S.Container className={`container ${customClass}`}>
 			{children}
-		</div>
+		</S.Container>
 	);
 }

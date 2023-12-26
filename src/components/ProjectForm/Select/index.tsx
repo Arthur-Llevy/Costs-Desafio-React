@@ -1,9 +1,9 @@
-import './styles.css';
+import * as S from '../styles.ts';
 import { SelectProps } from './types.ts';
 
 export const Select = ({ text, name, options, handleOnChange, value }: SelectProps) => {
 	return (
-		<div className="form-control">
+		<S.FormContainer>
 			<label htmlFor={name}>{text}:</label>
 			<select name={name} id={name} onChange={handleOnChange} value={value || ''}>
 				<option>Selecione uma opção</option>
@@ -11,6 +11,6 @@ export const Select = ({ text, name, options, handleOnChange, value }: SelectPro
 					<option value={option.id} key={option.id}>{option.name}</option>
 				))}
 			</select>
-		</div>
+		</S.FormContainer>
 	);
 };

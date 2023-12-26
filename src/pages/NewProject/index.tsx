@@ -1,4 +1,4 @@
-import './styles.css';
+import * as S from './styles.ts';
 import { ProjectForm } from '../../components/ProjectForm/';
 import { CreatePostProps } from './types.ts';
 import { useNavigate, NavigateFunction } from 'react-router-dom';
@@ -27,10 +27,10 @@ export const NewProject = () => {
 	};
 
 	return (
-		<div className="newproject-container">
+		<S.NewProjectContainer>
 			<h1>Criar projeto</h1>
 			<p>Crie seu projeto para depois adicionar os serviços</p>
 			<ProjectForm handleSubmit={createPost} btnText="Criar projeto"/>
-		</div>
+		</S.NewProjectContainer>
 	);
 };

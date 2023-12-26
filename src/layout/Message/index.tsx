@@ -1,4 +1,4 @@
-import './styles.css';
+import * as S from './styles.ts';
 import { MessageProps } from './types.ts';
 import { useState, useEffect } from 'react';
 
@@ -13,7 +13,7 @@ export const Message = ({ type, msg }: MessageProps) => {
 		};
 
 		setVisible(true);
-		const timer: number  = setTimeout(() => {
+		const timer: ReturnType<typeof setTimeout>  = setTimeout(() => {
 			setVisible(false);
 		}, 3000);
 
@@ -24,7 +24,7 @@ export const Message = ({ type, msg }: MessageProps) => {
 	return(
 		<>
 		{visible && 
-			(<div className={`message ${type}`}>{msg}</div>)			
+			(<S.MessageContainer className={`message ${type}`}>{msg}</S.MessageContainer>)			
 		}
 		</>
 	);

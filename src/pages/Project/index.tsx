@@ -1,4 +1,4 @@
-import './styles.css';
+import * as S from './styles.ts';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ProjectType } from './types.ts';
@@ -87,6 +87,7 @@ export const Project = () => {
 		};
 
 		project.costs = newCost;
+		console.log(project)
 
 		fetch(`http://localhost:5000/projects/${project.id}`, {
 			method: 'PATCH',
@@ -131,16 +132,16 @@ export const Project = () => {
 	return(
 		<>
 			{project ? (
-				<div className="project-details">
+				<S.ProjectDetailsContainer>
 					<Container customClass="column">
 						{message && <Message type={type} msg={message}/>}
-						<div className="details-container">
+						<S.DetailsContainer>
 							<h1>{project.name}</h1>
-							<button className="button" onClick={toggleProjectForm}>
+							<S.Button onClick={toggleProjectForm}>
 								{!showProjectForm ? "Editar projeto" : "Fechar"}
-							</button>
+							</S.Button>
 							{!showProjectForm ? (
-								<div className="project-info">
+								<S.ProjectInfo>
 									<p>
 										<span>Categoria:</span> {project.category.name}
 									</p>
@@ -150,23 +151,23 @@ export const Project = () => {
 									<p>
 										<span>Total utilizado:</span> {project.costs}
 									</p>
-								</div>
+								</S.ProjectInfo>
 							): (
-								<div className="project-info">
+								<S.ProjectInfo>
 									<ProjectForm 
 										handleSubmit={editPost}
 										btnText="Concluir edição"								
 										projectData={project}
 									/>
-								</div>
+								</S.ProjectInfo>
 							)}
-						</div>					
-						<div className="service-form-container">
+						</S.DetailsContainer>					
+						<S.ServiceFormContainer>
 							<h2>Adicione um serviço ao projeto</h2>
-							<button onClick={toggleServiceForm} className="button">
+							<S.Button onClick={toggleServiceForm}>
 								{!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
-							</button>
-							<div className="project-info">
+							</S.Button>
+							<S.ProjectInfo>
 								{showServiceForm && (
 									<ServiceForm 
 										handleSubmit={createService}
@@ -174,8 +175,8 @@ export const Project = () => {
 										projectData={project}
 									/>
 								)}
-							</div>
-						</div>
+							</S.ProjectInfo>
+						</S.ServiceFormContainer>
 						<h2>Serviços</h2>
 						<Container customClass="start">
 							{services.length > 0 ? (
@@ -194,7 +195,7 @@ export const Project = () => {
 							)}
 						</Container>
 					</Container>
-				</div>
+				</S.ProjectDetailsContainer>
 			): (
 				<Loading />
 			)}

@@ -1,10 +1,10 @@
-import './styles.css';
+import * as S from '../styles.ts';
 import { SubmitButtonProps } from './types.ts';
 
 export const SubmitButton = ({ text }: SubmitButtonProps) => {
 	return (
-		<div className="form-control">
-			<button className="btn">{text}</button>
-		</div>
+		<S.FormContainer>
+			<button>{text}</button>
+		</S.FormContainer>
 	);
 };
