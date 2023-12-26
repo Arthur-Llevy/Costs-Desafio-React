@@ -1,10 +1,10 @@
-import './style.css';
+import * as S from './styles.ts';
 import loadingIcon from '../../assets/img/loading.svg';
 
 export const Loading = () => {
 	return(
-		<div className="loader-container">
-			<img className="loader" src={loadingIcon} alt="loading-icon"/>
-		</div>
+		<S.LoadingContainer >
+			<img src={loadingIcon} alt="loading-icon"/>
+		</S.LoadingContainer>
 	);
 };

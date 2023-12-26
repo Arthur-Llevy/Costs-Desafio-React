@@ -1,4 +1,4 @@
-import '../ProjectCard/styles.css';
+import * as S from './styles.ts';
 import { ServiceCardProps } from './types.ts';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { MouseEvent } from 'react';
@@ -11,15 +11,15 @@ export const ServiceCard = ({ id, name, cost, description, handleRemove }: Servi
 	};
 
 	return (
-		<div className="project-card">
+		<S.ProjectCardContainer>
 			<h4>{name}</h4>
 			<p>
 				<span>Custo total: </span> {cost}
 			</p>
 			<p>{description}</p>
-			<div className="project-card-actions"> 
+			<S.ProjectCardActions> 
 				<button onClick={remove}><BsFillTrashFill />Excluir</button>
-			</div>
-		</div>
+			</S.ProjectCardActions>
+		</S.ProjectCardContainer>
 	);
 };

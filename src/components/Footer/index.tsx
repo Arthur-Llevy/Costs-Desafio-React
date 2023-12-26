@@ -1,9 +1,9 @@
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
-import './styles.css';
+import * as S from './styles.ts';
 
 export const Footer = () => {
 	return (
-		<footer className="footer">
+		<S.FooterContainer>
 			<ul>
 				<li>
 					<FaFacebook />
@@ -15,7 +15,7 @@ export const Footer = () => {
 					<FaLinkedin />
 				</li>
 			</ul>
-			<p className="copy-right"><span>Costs</span> &copy; 2023</p>
-		</footer>
+			<S.CopyRight><span>Costs</span> &copy; 2023</S.CopyRight>
+		</S.FooterContainer>
 	);
 }

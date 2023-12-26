@@ -1,11 +1,10 @@
-import './styles.css';
+import * as S from './styles.ts';
 import { LinkButtonProps } from './types.ts';
-import { Link } from 'react-router-dom';
 
 export const LinkButton = ({ to, text }: LinkButtonProps) => {
 	return(
-		<Link className="btn" to={to}>
+		<S.StyledLink to={to}>
 			{text}
-		</Link>
+		</S.StyledLink>
 	);
 };
