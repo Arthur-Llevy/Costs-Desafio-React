@@ -24,7 +24,7 @@ export const Projects = () => {
 	const abortController: AbortController = new AbortController();
 
 	useEffect(() => {
-		const timeOut: NodeJS.Timeout = setTimeout(() => {
+		const timeOut: ReturnType<typeof setTimeout> = setTimeout(() => {
 			fetch('http://localhost:5000/projects', {
 				method: "GET",
 				headers: {
