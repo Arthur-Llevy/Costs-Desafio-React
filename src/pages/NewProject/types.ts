@@ -1,3 +1,10 @@
+type ServiceType = {
+	name: string;
+	cost: number;
+	description: string;
+	id: number;
+}
+
 type CreatePostProps = {
 	category: {
 		id: number;
@@ -7,7 +14,7 @@ type CreatePostProps = {
 	budget: number;
 	id: number;
 	costs: number;
-	services: string[];
+	services: ServiceType[];
 };
 
 
