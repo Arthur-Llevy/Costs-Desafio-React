@@ -23,7 +23,7 @@ export const Project = () => {
 
 	useEffect(() => {
 		const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
-			fetch(`http://localhost:5000/projects/${id}`, {
+			fetch(`http://localhost:5016/projects/${id}`, {
 				method: "GET",
 				headers: { "Content-Type": "application/json" }
 			})
@@ -53,14 +53,14 @@ export const Project = () => {
 			return false
 		};
 
-		fetch(`http://localhost:5000/projects/${currentProject.id}`, {
+		console.log(currentProject)
+
+		fetch(`http://localhost:5016/projects/${currentProject.id}`, {
 			method: "PATCH",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(currentProject)
 		})
-		.then(response => response.json())
-		.then(data => {
-			setProject(data);
+		.then(() => {
 			setShowProjectForm(false);
 			setMessage('Projeto atualizado');
 			setType('sucess');
@@ -87,16 +87,16 @@ export const Project = () => {
 		};
 
 		project.costs = newCost;
-		console.log(project)
 
-		fetch(`http://localhost:5000/projects/${project.id}`, {
+		fetch(`http://localhost:5016/projects/addService/${project.id}`, {
 			method: 'PATCH',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(project)
+			body: JSON.stringify(project.services)
 		})
-		.then(response => response.json())
 		.then(() => {
 			setShowProjectForm(false);
+			setMessage('Novo serviço criado com sucesso.');
+			setType('sucess');
 		})
 		.catch(err => alert(`Ocorreu um erro ao adicionar um serviço ao projeto: ${err}`))
 	};
@@ -111,13 +111,10 @@ export const Project = () => {
 			projectUpdated.services = servicesUpdated;
 			projectUpdated.costs = parseFloat((projectUpdated.costs).toString()) - parseFloat(cost.toString());
 			console.log(projectUpdated)
-
-			fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
-				method: "PATCH",
+			fetch(`http://localhost:5016/projects/removeService/${id}`, {
+				method: "DELETE",
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(projectUpdated)
 			})
-			.then(response => response.json())
 			.then(() => {
 				setProject(projectUpdated);
 				setServices(servicesUpdated);

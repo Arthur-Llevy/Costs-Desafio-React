@@ -1,14 +1,71 @@
 {
   "projects": [
     {
-      "name": "Site",
-      "budget": "2000",
+      "name": "Landing page  com php",
+      "budget": 80000,
       "category": {
-        "id": 4,
-        "name": "Planejamento"
+        "id": 2,
+        "name": "Desenvolvimento"
       },
-      "costs": 0,
-      "services": [],
+      "costs": -100,
+      "services": [
+        {
+          "id": 1,
+          "name": "servico",
+          "cost": 1,
+          "description": "desc",
+          "project_Id": 1
+        },
+        {
+          "id": 3,
+          "name": "serviço teste 34",
+          "cost": 500,
+          "description": "200",
+          "project_Id": 1
+        },
+        {
+          "id": 4,
+          "name": "teste",
+          "cost": 1,
+          "description": "desc",
+          "project_Id": 1
+        },
+        {
+          "id": 5,
+          "name": "teste5",
+          "cost": 233,
+          "description": "decs",
+          "project_Id": 1
+        },
+        {
+          "id": 6,
+          "name": "teste3",
+          "cost": 23,
+          "description": "23",
+          "project_Id": 1
+        },
+        {
+          "id": 7,
+          "name": "teste",
+          "cost": 123,
+          "description": "32",
+          "project_Id": 1
+        },
+        {
+          "id": 8,
+          "name": "tesqweqw12e",
+          "cost": 12,
+          "description": "asda",
+          "project_Id": 1
+        },
+        {
+          "id": 9,
+          "name": "asdasd",
+          "cost": 123,
+          "description": "3",
+          "project_Id": 1
+        }
+      ],
       "id": 1
     },
     {
@@ -18,8 +75,15 @@
       },
       "name": "Teste",
       "budget": "1200",
-      "costs": 0,
-      "services": [],
+      "costs": 2,
+      "services": [
+        {
+          "name": "tesete",
+          "cost": "2",
+          "description": "2",
+          "id": null
+        }
+      ],
       "id": 2
     },
     {
@@ -29,8 +93,15 @@
         "id": 1,
         "name": "Infra"
       },
-      "costs": 0,
-      "services": [],
+      "costs": null,
+      "services": [
+        {
+          "name": "12312",
+          "cost": "",
+          "description": "12312",
+          "id": null
+        }
+      ],
       "id": 3
     },
     {
@@ -43,6 +114,28 @@
       "costs": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "teste",
+      "budget": "1233",
+      "category": {
+        "id": 2,
+        "name": "Desenvolvimento"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "Nome teste",
+      "budget": "78",
+      "category": {
+        "id": 2,
+        "name": "Desenvolvimento"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "categories": [

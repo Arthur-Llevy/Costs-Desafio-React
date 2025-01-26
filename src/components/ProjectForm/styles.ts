@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 1em;
@@ -27,17 +27,19 @@ export const FormContainer = styled.div`
 		background: #fff;
 	}
 
-	button {
-		background: #222;
-		color: #fff;
-		padding: 0.7em 1.2em;
-		text-decoration: none;
-		transition: .5s;
-		cursor: pointer;
-		border: none;
-	}
+	
+`;
 
-	button:hover {
+export const SubmitButton = styled.button`
+	background: #222;
+	color: #fff;
+	padding: 0.7em 1.2em;
+	text-decoration: none;
+	transition: .5s;
+	cursor: pointer;
+	border: none;
+
+	&:hover {
 		color: #ffbb22;
 	}
-`;
+`

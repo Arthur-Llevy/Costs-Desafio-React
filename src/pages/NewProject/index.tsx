@@ -11,7 +11,7 @@ export const NewProject = () => {
 		project.costs = 0;
 		project.services = [];
 
-		fetch('http://localhost:5000/projects', {
+		fetch('http://localhost:5016/projects', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

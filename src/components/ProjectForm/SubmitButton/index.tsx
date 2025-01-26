@@ -3,8 +3,6 @@ import { SubmitButtonProps } from './types.ts';
 
 export const SubmitButton = ({ text }: SubmitButtonProps) => {
 	return (
-		<S.FormContainer>
-			<button>{text}</button>
-		</S.FormContainer>
+		<S.SubmitButton type='submit'>{text}</S.SubmitButton>
 	);
 };

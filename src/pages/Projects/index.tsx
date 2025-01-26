@@ -25,7 +25,7 @@ export const Projects = () => {
 
 	useEffect(() => {
 		const timeOut: ReturnType<typeof setTimeout> = setTimeout(() => {
-			fetch('http://localhost:5000/projects', {
+			fetch('http://localhost:5016/projects', {
 				method: "GET",
 				headers: {
 					'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ export const Projects = () => {
 	}, []);
 
 	const removeProject = (id: number): void => {
-		fetch(`http://localhost:5000/projects/${id}`, {
+		fetch(`http://localhost:5016/projects/${id}`, {
 				method: "DELETE",
 				headers: {
 					'Content-Type': 'application/json'
