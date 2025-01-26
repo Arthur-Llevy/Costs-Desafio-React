@@ -10,13 +10,11 @@ O Costs é um projeto de conclusão do curso de React do canal [Matheus Batistti
  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
  ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
  
- - ### Stack - Back End
-   Até o momento, o "Back End" foi feito com o [json-server](https://www.npmjs.com/package/json-server), uma biblioteca para o JavaScript.
-   > "Obtenha uma API REST totalmente falsa com zero codificação em menos de 30 segundos (sério)".
-   
-   Como está escrito em sua documentação, é basicamente uma API REST baseada em um arquivo .json, muito últil para testes.
-   Mas, em breve, o Back End completo virá...
-   
+ - ### Stack - Back 
+ ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) <br>
+
+ [Link do repositório do backend](https://github.com/Arthur-Llevy/costs-api)
+ ---
  - ### Como rodar o projeto em sua máquina?
    Baixe o repositório manualmente, ou com o comando abaixo:
    ```bash
@@ -45,11 +43,11 @@ Costs is a React course completion project from the [Matheus Batistti - Hora de 
  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
  ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
  
- - ### Stack - Back End
-   So far, the "Back End" has been implemented using [json-server](https://www.npmjs.com/package/json-server), a JavaScript library.
-   > "Get a full fake REST API with zero coding in less than 30 seconds (seriously)."
-   
-   As stated in its documentation, it is essentially a REST API based on a .json file, very useful for testing purposes. However, a complete Back End will be implemented soon.
+- ### Stack - Backend
+ ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) <br>
+
+ [Backend repository link](https://github.com/Arthur-Llevy/costs-api)
+ ---
    
  - ### How to run the project on your machine?
    Download the repository manually or using the following command:
